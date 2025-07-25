@@ -6,6 +6,8 @@ from langchain_groq import ChatGroq
 from urllib.parse import quote
 import requests
 
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv())
 
 def display_recipe_image(recipe_name):
     api_key = os.getenv('PIXABAY_API_KEY')
